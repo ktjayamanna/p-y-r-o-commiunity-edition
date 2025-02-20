@@ -1,0 +1,109 @@
+.scrollableCard {
+  overflow: auto;
+  padding-bottom: 200px;
+}
+
+.scrollableCard::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.scrollableCard::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.scrollableCard::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.scrollableCard::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.itemList {
+  padding-right: 10px;
+  scroll-behavior: smooth;
+  max-height: 1600px;
+}
+
+.itemList::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.itemList::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.itemList::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.itemList::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.itemList {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.itemList:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.item:hover {
+  background-color: #f8f9fa;
+}
+
+.smallPlaceholder::placeholder {
+  font-size: 0.85rem;
+}
+
+.voiceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.voiceItem:hover {
+  background-color: #f8f9fa;
+}
+
+.playIcon {
+  font-size: 1.25rem;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.playIcon:hover {
+  color: #000000;
+}
+
+.selectedItem {
+  background-color: #e6f7ff;
+  border: 2px solid #1890ff;
+  border-radius: 4px;
+}
+

@@ -1,0 +1,7 @@
+.voiceSelector {
+  cursor: pointer;
+}
+
+.voiceSelector:hover {
+  text-decoration: underline;
+}

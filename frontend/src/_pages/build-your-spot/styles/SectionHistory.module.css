@@ -1,0 +1,66 @@
+.sectionHistory {
+    width: 300px; /* Adjust this value to your desired width */
+    overflow-y: auto;
+    border-left: 1px solid #DEDDDC;
+  }
+  
+  .play-button-wrapper {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .play-button {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .play-button:hover {
+    background-color: #555;
+  }
+  
+  .content-wrapper {
+    flex-grow: 1;
+    min-width: 0; /* This allows the content to shrink below its minimum content size */
+  }
+  
+  .use-read-button {
+    background-color: #f1f4fa;
+    border: none;
+    color: #333;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+  
+  .use-read-button:hover {
+    background-color: #e9eef5;
+    color: #333;
+  }
+  
+  .sectionHistory::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .sectionHistory::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .sectionHistory::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  .sectionHistory::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

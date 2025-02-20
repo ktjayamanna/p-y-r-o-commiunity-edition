@@ -1,0 +1,385 @@
+/* #region SectionsPanel */
+/* Sections Panel styles : Please do not remove this comment.*/
+.sectionsColumn {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: black;
+    padding-bottom: 120px;
+}
+
+.sectionWrapper {
+    margin-bottom: 1rem;
+    z-index: 7;
+}
+
+.sectionCard {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-right: 75px;
+}
+
+.card {
+    margin-right: 75px; /* Adjust this value as needed */
+}
+
+.sectionContent {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+}
+
+.userAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sectionTextarea {
+    width: 100%;
+    resize: none; /* Disable manual resizing */
+    overflow: hidden; /* Hide scrollbars */
+    border: 1px solid #e0e0e0;
+    outline: none;
+    min-height: 75px; /* Ensure a minimum height */
+    color: black;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    font-family: inherit; /* Ensure consistent font */
+    font-size: 1rem; /* Adjust as needed */
+    padding: 8px 12px; /* Add padding for spacing */
+}
+
+
+.uploadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    color: #495057;
+    font-weight: normal;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.uploadButton:active,
+.uploadButton:active:focus {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    color: #495057;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.uploadButton:hover,
+.uploadButton:focus {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    color: #495057;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.sectionActions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #000;
+}
+
+.generateButton {
+    background-color: #fde8d7;
+    border-color: #fde8d7;
+    color: #000;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: "Poppins";
+}
+
+.generateButton:hover {
+    background-color: #fde8d7;
+    border-color: #fde8d7;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.generateButton:focus,
+.generateButton:active,
+.generateButton:active:focus {
+    background-color: #fde8d7 !important;
+    border-color: #fde8d7 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.moreOptionsButton {
+    color: black;
+}
+
+.moreOptionsButton:focus,
+.moreOptionsButton:active,
+.moreOptionsButton:active:focus, 
+.moreOptionsButton:hover {
+    color: black;
+}
+
+.moreOptionsDropdownItem {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.moreOptionsDropdownItem:focus,
+.moreOptionsDropdownItem:active,
+.moreOptionsDropdownItem:active:focus,
+.moreOptionsDropdownItem:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.addSection {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 100%;
+    margin-right: 75px;
+}
+
+.controlRow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.durationLabel {
+    font-size: 0.8rem;
+    color: #999;
+    margin-right: 0.5rem;
+}
+
+.miniPlus {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smallPlusIcon {
+    font-size: 0.8rem;
+}
+
+.mainLine {
+    flex: 1;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 0 0.5rem;
+    margin-right: 75px;
+}
+
+.topLeftLine {
+    flex: 1;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 0 0.5rem;
+    margin-right: 128px;
+}
+
+.addSectionIcon {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 75px;
+}
+
+.addSectionIcon:hover,
+.addSectionIcon:focus,
+.addSectionIcon:active {
+    background: none;
+    border: none;
+    color: #999;
+}
+
+.sectionsColumn::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sectionsColumn::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sectionsColumn::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sectionsColumn::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.scrollButtonsContainer {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.scrollToTopButton,
+.scrollToBottomButton {
+    background-color: #eb631c;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scrollToTopButton:hover,
+.scrollToBottomButton:hover {
+    background-color: #ff8a70;
+    transform: scale(1.1);
+}
+
+.scrollToTopButton i,
+.scrollToBottomButton i {
+    font-size: 24px;
+    color: white;
+}
+
+.dummyTopSection {
+    height: 50px; /* Adjust based on your navbar's height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* New section to allow a bar above the first section */
+.addSectionTop {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 100%;
+    margin-right: 75px;
+    margin-bottom: 1rem;
+}
+
+.dummyBottomSection {
+    height: 50px; /* Adjust to the space needed for dropdown visibility */
+}
+
+/* #endregion */
+
+/* #region AudioPlayer */
+/* Audio Player styles : Please do not remove this comment.*/
+.audioPlayer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    z-index: 6;
+}
+/* #endregion */
+
+/* #region Other */
+/* Other styles : Please do not remove this comment.*/
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.contentWrapper {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.addSectionDropdownItem {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.addSectionDropdownItem:focus,
+.addSectionDropdownItem:active,
+.addSectionDropdownItem:active:focus,
+.addSectionDropdownItem:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.activeSection {
+    border: 2px solid #eb631c; /* Highlight with a distinct border color */
+    box-shadow: 0 0 10px rgba(235, 99, 28, 0.5); /* Optional: Add a subtle shadow */
+    background-color: #fff8f2; /* Optional: Slight background color change */
+    transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* #endregion */
+
+.musicLabel {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: #555555; /* A soft gray for the label */
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.musicValue {
+    font-family: 'Lora', serif; /* Another elegant font, different from the label */
+    font-size: 1.2rem;
+    color: #ff5722; /* A more vibrant color for the music */
+    font-weight: 600;
+    text-decoration: underline; /* Add a subtle underline to emphasize it */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Soft border or underline to separate the music display */
+.musicDisplayWrapper {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light divider under the text */
+}
+
+.generateButton:disabled {
+    opacity: 0.2;
+    background-color: #fde8d7;
+    border-color: #fde8d7;
+    color: #000;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: "Poppins";
+}
+

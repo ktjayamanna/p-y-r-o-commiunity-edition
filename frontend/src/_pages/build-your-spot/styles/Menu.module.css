@@ -1,0 +1,76 @@
+.menuColumn {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    z-index: 9;
+    transition: width 0.3s ease;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    padding: 10px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.menuItem i {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: black;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menuItem span {
+    font-size: 0.8rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.menuItem:hover {
+    background-color: #fce8dd;
+    color: #dc3545;
+}
+
+.menuItem.active {
+    background-color: #fce8dd;
+    color: #dc3545;
+}
+
+.profileButtonContainer {
+    position: absolute;
+    bottom: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profileButton {
+    background-color: #EB631C80;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.profileButton:hover {
+    background-color: #EB631C80;
+    transform: scale(1.1);
+}

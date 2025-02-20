@@ -1,0 +1,23 @@
+# Relative path : docker-compose.yml
+version: '3.8'
+
+services:
+  web:
+    build: 
+      context: .
+      target: development  # Use "production" for production builds
+
+    ports:
+      - "8000:8000"
+    environment:
+      - NAME=World
+    command: gunicorn --bind 0.0.0.0:8000 flask_api:app
+
+  celery_worker:
+    build: 
+      context: .
+      target: development  # Use "production" for production builds
+
+    environment:
+      - NAME=World
+    command: celery -A flask_api.celery worker --loglevel=DEBUG

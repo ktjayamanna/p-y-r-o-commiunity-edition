@@ -1,0 +1,92 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - closed
+
+jobs:
+  test:
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+
+      - name: Run tests with pytest
+        run: |
+          python -m pytest
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+
+  build-and-push-docker:
+    needs: test
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and Push Docker Image for Flask API
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ROOT_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ROOT_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-2
+          FLASK_ECR_REPOSITORY_URL: ${{ secrets.FLASK_ECR_REPOSITORY_URL }}
+          TAG: latest
+        run: |
+          VERSION=$(cat VERSION)
+          echo "Logging into AWS ECR for Flask API version $VERSION..."
+          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $FLASK_ECR_REPOSITORY_URL
+          echo "Building and tagging Docker image for Flask API..."
+          docker build --target production -t ${FLASK_ECR_REPOSITORY_URL}:${TAG} .
+          echo "Pushing Docker image for Flask API to Amazon ECR..."
+          docker push ${FLASK_ECR_REPOSITORY_URL}:${TAG}
+
+      - name: Build and Push Docker Image for Celery Worker
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ROOT_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ROOT_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-2
+          CELERY_ECR_REPOSITORY_URL: ${{ secrets.CELERY_ECR_REPOSITORY_URL }}
+          TAG: latest
+        run: |
+          VERSION=$(cat VERSION)
+          echo "Logging into AWS ECR for Celery Worker version $VERSION..."
+          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $CELERY_ECR_REPOSITORY_URL
+          echo "Building and tagging Docker image for Celery Worker..."
+          docker build --target production -t ${CELERY_ECR_REPOSITORY_URL}:${TAG} .
+          echo "Pushing Docker image for Celery Worker to Amazon ECR..."
+          docker push ${CELERY_ECR_REPOSITORY_URL}:${TAG}
+          echo "Images pushed successfully."
+
+  deploy-to-beanstalk:
+    needs: build-and-push-docker
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    runs-on: [self-hosted, linux]
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ROOT_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ROOT_SECRET_ACCESS_KEY }}
+      AWS_REGION: us-east-2
+      EB_ENVIRONMENT_ID: ${{ secrets.EB_ENVIRONMENT_ID }}
+    steps:
+      - name: Deploy to Elastic Beanstalk
+        run: |
+          VERSION=$(cat VERSION)
+          echo "Deploying update version $VERSION to AWS Elastic Beanstalk environment ID $EB_ENVIRONMENT_ID ..."
+          aws elasticbeanstalk rebuild-environment --environment-id $EB_ENVIRONMENT_ID
+          echo "Deployment process completed successfully!"

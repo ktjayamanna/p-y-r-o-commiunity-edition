@@ -1,0 +1,144 @@
+/* #region Shared Styles (Used in both OrderSummary and AddScript) */
+.whiteBackgroundContainer {
+    background-color: #ffffff; /* White background */
+    padding: 40px; /* Padding around the content */
+    margin: 50px auto; /* Center align with margin */
+}
+
+.orderContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.orderContent {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.orderForm label {
+    font-size: 1rem; 
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.formLabel {
+    color: #333;
+}
+
+.orderForm .form-control {
+    color: #555;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.textarea {
+    min-height: 500px;
+}
+
+.orderFooter {
+    display: flex;
+    justify-content: space-between; /* Aligns total to the left and buttons to the right */
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #E0E0E0;
+    margin-top: 10%;
+}
+
+.orderButton {
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    flex-grow: 1;
+    max-width: 150px;
+}
+
+.payNowButton {
+    background-color: #eb631c;
+    border-color: #eb631c;
+    color: #fff;
+}
+
+.payNowButton:hover {
+    background-color: #d25b18;
+    border-color: #d25b18;
+    color: #fff;
+}
+
+/* #endregion */
+
+/* #region Order Summary Specific Styles (Used only in OrderSummary) */
+
+.orderTitle {
+    color: #333;
+    margin-top: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 10px; /* Controls the space between the two buttons */
+}
+
+.orderTotal {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* #endregion */
+
+/* For screens between 1440px and 3500px */
+@media screen and (max-width: 1440px) {
+    .orderContainer {
+        max-width: 500px; /* Reduced width for large screens */
+        align-items: flex-start; /* Move to flex-start */
+    }
+
+
+}
+
+/* For screens between 1024px and 1440px */
+@media screen and (max-width: 1024px) {
+    .orderContainer {
+        max-width: 300px; /* Even smaller width for mid-sized screens */
+        align-items: flex-start; /* Move to flex-start */
+        margin-left: 0px;
+    }
+}
+
+/* For screens less than 1024px */
+@media screen and (max-width: 1023px) {
+    .orderContainer {
+        max-width: 300px; /* Even smaller width for smaller screens */
+        align-items: flex-start; /* Move to flex-start */
+        margin-left: 0px;
+    }
+    .orderButton {
+        font-family: 'Poppins', sans-serif;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-size: 1rem;
+        flex-grow: 1;
+        max-width: 150px;
+    }
+    
+    .payNowButton {
+        background-color: #eb631c;
+        border-color: #eb631c;
+        color: #fff;
+    }
+}
+

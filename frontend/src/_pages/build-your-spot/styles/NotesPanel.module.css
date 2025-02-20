@@ -1,0 +1,39 @@
+.notesColumn {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    z-index: 8;
+}
+
+.notesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+.notesBody {
+    flex: 1;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.notesTextarea {
+    width: 100%;
+    height: 93.5%;
+    resize: none;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    color: black;
+    background-color: #ffffff;
+}
+
+
+
+.closeButton:hover {
+    opacity: 0.7;
+}

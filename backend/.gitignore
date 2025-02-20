@@ -1,0 +1,15 @@
+#security
+.env
+bash_scripts/ecr_deployment/push_commands.sh
+data/*
+
+#tests
+playground/*
+.vercel
+#ignore all the __pycache__ folders
+**/__pycache__
+**/.pytest_cache
+
+
+soundtouch-master.zip
+Dockerrun.aws.json

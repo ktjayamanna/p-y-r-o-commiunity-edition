@@ -1,0 +1,1 @@
+docker exec -it fire-local-container /bin/bash

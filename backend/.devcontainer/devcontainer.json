@@ -1,0 +1,29 @@
+{
+    "name": "firebay-backend",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": "..",
+        "target": "development"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "GitHub.copilot",
+        "ms-python.black-formatter",
+        "yatki.vscode-surround",
+        "GitHub.copilot-chat",
+        "ms-toolsai.jupyter",
+        "GitHub.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
+        // "Codeium.codeium",
+        "ms-vscode.cpptools",
+
+
+    ],
+    "workspaceFolder": "/code",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=cached",
+    "runArgs": [
+        "--ipc=host",
+        "--env-file=.devcontainer/.env"
+    ],
+}

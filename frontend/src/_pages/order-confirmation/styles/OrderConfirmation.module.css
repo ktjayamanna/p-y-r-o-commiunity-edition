@@ -1,0 +1,73 @@
+.confirmationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  text-align: center;
+  background-color: #f8f8f8; /* Light background color */
+  width: 100%; /* Full width */
+  padding: 0;  /* Remove any padding */
+  margin: 0;   /* Remove any margins */
+}
+
+.contentWrapper {
+  max-width: 600px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkmarkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkmark {
+  width: 72px;
+  height: 72px;
+}
+
+.checkmarkCircle {
+  stroke: #4caf50; /* Green color */
+  stroke-width: 4;
+}
+
+.checkmarkCheck {
+  stroke: #4caf50; /* Green color */
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.confirmationTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.confirmationMessage {
+  font-size: 16px;
+  color: #666;
+}
+
+.homeButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #EB631C;  /* Button background color */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #d55a1a;  /* Darker shade on hover */
+}

@@ -1,0 +1,50 @@
+{
+  "name": "prototype-isildur",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.651.1",
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^4.5.0",
+    "aws-sdk": "^2.1691.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "firebase": "^10.13.1",
+    "glob": "^11.0.0",
+    "lru-cache": "^11.0.1",
+    "next": "14.2.7",
+    "posthog-js": "^1.161.0",
+    "react": "18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "18.3.1",
+    "react-player": "^2.16.0",
+    "react-textarea-autosize": "^8.5.4",
+    "react-toastify": "^10.0.5",
+    "rimraf": "^6.0.1",
+    "stripe": "^16.10.0",
+    "sweetalert2": "^11.14.1",
+    "wavesurfer.js": "^7.8.5",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.1.11",
+    "@storybook/addon-interactions": "^8.1.11",
+    "@storybook/addon-links": "^8.1.11",
+    "@storybook/addon-onboarding": "^8.1.11",
+    "@storybook/blocks": "^8.1.11",
+    "@storybook/nextjs": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/test": "^8.1.11",
+    "storybook": "^8.2.9"
+  }
+}

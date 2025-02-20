@@ -1,0 +1,243 @@
+/* #region Shared Styles (Used in both OrderSummary and AddScript) */
+.fullWidthWrapper {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.addScriptContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Take full available width */
+  max-width: 1200px; /* Fixed max-width */
+  margin: 0 auto;
+  padding: 0 20px; /* Consistent padding */
+}
+
+.addScriptForm label {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  width: 100%;
+}
+
+.addScriptForm .form-control {
+  font-size: 1rem;
+  padding: 12px;
+  background-color: #ffffff;
+  width: 100%; /* Fixed width */
+}
+
+.addScriptFooter {
+  display: flex;
+  justify-content: space-between; /* Align total to the left and buttons to the right */
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #E0E0E0;
+  margin-top: 40px; /* Set fixed margin to maintain consistent gap */
+}
+
+.addScriptButton {
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  max-width: 150px; /* Fixed max-width for buttons */
+}
+
+/* #endregion */
+
+/* Textarea style */
+.scriptTextarea {
+  color: #555;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: min-height 0.3s ease;
+  width: 100%; /* Removed responsive width adjustments */
+}
+
+/* Combined definition of .addScriptTitle */
+.addScriptTitle {
+  color: #333;
+  margin-top: 1.8rem; /* Kept margin-top from the first definition */
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+/* Height-related media queries (preserved) */
+
+/* Base height for larger screens */
+.scriptTextarea {
+  min-height: 500px !important;
+}
+
+/* More aggressive height reduction as screen size decreases */
+@media (max-height: 1200px) {
+  .scriptTextarea {
+    min-height: 400px !important;
+  }
+}
+
+@media (max-height: 1000px) {
+  .scriptTextarea {
+    min-height: 300px !important;
+  }
+}
+
+@media (max-height: 900px) {
+  .scriptTextarea {
+    min-height: 250px !important;
+  }
+}
+
+@media (max-height: 800px) {
+  .scriptTextarea {
+    min-height: 200px !important;
+  }
+}
+
+@media (max-height: 700px) {
+  .scriptTextarea {
+    min-height: 150px !important;
+  }
+}
+
+@media (max-height: 600px) {
+  .scriptTextarea {
+    min-height: 120px !important;
+  }
+}
+
+@media (max-height: 500px) {
+  .scriptTextarea {
+    min-height: 50px !important;
+  }
+}
+
+@media (max-height: 400px) {
+  .scriptTextarea {
+    min-height: 20px !important;
+  }
+}
+
+/* Adjusting for smaller screen heights */
+@media (max-height: 700px) {
+  .addScriptContainer, .addScriptContent {
+    margin-top: 0 !important;
+    padding-top: 0px !important; /* Reduce top padding */
+  }
+  .addScriptTitle {
+    display: none;
+  }
+}
+
+/* #region Form Group Styles */
+.addScriptForm label {
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.addScriptForm .form-control {
+  color: #555;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.addScriptForm .form-group {
+  margin-bottom: 20px; /* Ensure consistent spacing between form groups */
+}
+/* #endregion */
+
+/* #region Dropdown Styles */
+.addScriptForm select {
+  color: #555;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* #endregion */
+
+/* #region Footer Styles */
+.addScriptFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #E0E0E0;
+  margin-top: 40px; /* Set fixed margin for consistent spacing */
+}
+
+.addScriptButton {
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  max-width: 150px;
+}
+
+.addScriptButton.primary {
+  background-color: #eb631c;
+  border-color: #eb631c;
+  color: #fff;
+}
+/* #endregion */
+
+/* Base styles for the addScriptContent */
+.addScriptContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px;
+  margin: 0 auto; /* Center the content initially */
+  width: 100%; /* Full width for flexibility */
+  margin-left: 0; /* Make sure children adjust their position correctly */
+}
+
+/* Media queries for different screen widths */
+
+/* For screens with width of 1900px or more */
+@media (min-width: 1900px) {
+  .addScriptContent {
+    max-width: 1000px; /* Limit max-width for larger screens */
+  }
+}
+
+/* For screens with width of 1440px or more */
+@media (min-width: 1440px) and (max-width: 1899px) {
+  .addScriptContent {
+    max-width: 700px; /* Adjust max-width for medium-large screens */
+  }
+}
+
+/* For screens with width of 1024px or more */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .addScriptContent {
+    max-width: 450px; /* Adjust max-width for smaller screens */
+  }
+}
+
+/* For smaller screens below 1024px, use full width */
+@media (max-width: 1023px) {
+  .addScriptContent {
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 450px; /* No max-width on smaller screens */
+  }
+}
+

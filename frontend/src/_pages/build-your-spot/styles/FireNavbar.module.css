@@ -1,0 +1,187 @@
+/* #region Navbar */
+/* Navbar styles : Please do not remove this comment.*/
+.navBar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 10;
+}
+
+.navBarMenuButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-left: 18px;
+    color: #000;
+    background-color: transparent;
+}
+
+.navBarMenuButton:focus,
+.navBarMenuButton:active,
+.navBarMenuButton:active:focus {
+    color: #000 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.navBarMenuButton:hover {
+    color: #000;
+    background-color: transparent;
+    transform: scale(1.05);
+}
+
+.spotName {
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.hoverable:hover {
+    border: 1px dashed #000;
+}
+
+.editableProjectName {
+    width: 300px;
+}
+
+.navButton {
+    margin-left: 10px;
+    color: black;
+    width: 130px;
+}
+
+.produceSpotButton {
+    background-color: #eb631c;
+    border-color: #eb631c;
+    margin-left: 10px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.produceSpotButton:disabled {
+    background-color: #eb631c;
+    border-color: #eb631c;
+    margin-left: 10px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.produceSpotButton:hover {
+    background-color: #eb631c;
+    border-color: #eb631c;
+    transform: scale(1.05);
+}
+
+.produceSpotButton:focus,
+.produceSpotButton:active,
+.produceSpotButton:active:focus {
+    background-color: #eb631c !important;
+    border-color: #eb631c !important;
+    color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+
+.logoImg {
+    max-width: 200px;
+}
+/* #endregion */
+
+/* #region navBarMenu */
+/* Mobile Menu styles : Please do not remove this comment.*/
+.createAdButton {
+    width: 100%;
+    background-color: #eb631c;
+    border-color: #eb631c;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add these new styles */
+.createAdButton:hover {
+    background-color: #eb631c;
+    border-color: #eb631c;
+    transform: scale(1.02);
+}
+
+.createAdButton:focus,
+.createAdButton:active,
+.createAdButton:active:focus {
+    background-color: #eb631c !important;
+    border-color: #eb631c !important;
+    color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.homeLink {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.recentAdsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.recentAdsTitle {
+    margin: 0;
+}
+
+.seeAllButton {
+    padding: 0;
+    color: #eb631c;
+    text-decoration: none;
+}
+
+.seeAllButton:hover,
+.seeAllButton:focus,
+.seeAllButton:active,
+.seeAllButton:active:focus {
+    color: #eb631c !important;
+    text-decoration: underline !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.recentAdItem {
+    padding: 0.5rem 0;
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+.paginationButton {
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 15px;  /* Padding for larger click area */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f8f9fa; /* Light background */
+    transition: background-color 0.3s ease;
+}
+
+.paginationButton:hover {
+    background-color: #e2e6ea; /* Slightly darker on hover */
+}
+
+
+/* #endregion */
+
+.musicDisplayWrapper {
+    display: flex;
+    align-items: baseline;
+    margin-right: 20px;
+    padding: 5px;
+}

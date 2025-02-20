@@ -1,0 +1,45 @@
+.custom-table {
+    font-size: 1.3rem;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 1rem 0.5rem;
+  }
+  
+  .custom-table thead {
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .table-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .edit-button {
+    margin-right: 10px;
+    background-color: #eb631c;
+    border: none;
+      /* Add these rules to maintain styling on click */
+  &:active,
+  &:focus,
+  &:hover,
+  &:focus-visible {
+    background-color: #eb631c !important;
+    color: white !important;
+    outline: none !important;
+  }
+  }
+
+  
+  .pagination-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 4px;
+  }
+  .editableProjectName {
+    max-width: 250px;  /* Adjust as necessary */
+  }
+  
+  
