@@ -16,7 +16,7 @@ We welcome contributors who share this vision! If you're interested in helping u
 
 This project is available under an **open-source, non-commercial license**. You may read, modify, and contribute to the code.  
 
-**⚠️ Commercial use is not permitted.**  
+**⚠️ Commercial use is not permitted unless you are a soloprenuer.**  
 
 ## 🚀 Getting Started
 Since the current state of the project is cloud based, you'd need to set up the cloud services to get the product up and running on your local computer. If you need any help with setting up the cloud infrastructure, please reach out to [kjayamanna@firebaystudios.com](mailto:kjayamanna@firebaystudios.com)
