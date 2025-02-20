@@ -14,7 +14,7 @@ We welcome contributors who share this vision! If you're interested in helping u
 
 ## ⚖️ License
 
-This project is available under an **open-source, non-commercial license**. You may read, modify, and contribute to the code.  
+This project is available under an **open-source, non-commercial license**. You may read, modify, and contribute to the code.   
 
 **⚠️ Commercial use is not permitted unless you are a soloprenuer.**  
 
